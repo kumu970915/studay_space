@@ -1,0 +1,13 @@
+在/etc/docker/daemon.json文件中增加如下内容:
+
+{ "registry-mirrors": ["https://xxxx.mirror.aliyuncs.com"] }
+
+
+
+sudo systemctl daemon-reload
+
+sudo systemctl restart docker
+
+再设置服务自启动
+
+systemctl enable docker.service
